@@ -1,0 +1,14 @@
+FROM alpine:3.20
+
+# herramientas necesarias
+RUN apk add --no-cache \
+    bash \
+    curl \
+    openssl \
+    docker-cli \
+    git
+
+WORKDIR /work
+
+# bash como shell por defecto
+ENTRYPOINT ["/bin/bash"]
